@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+
+        android:text="회원 가입"
+
+        android:textSize="20sp"
+
+        android:gravity="center_horizontal"
+
+        android:textColor="#1A120B"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="사용자 이름"
+        android:inputType="textMultiLine"
+        android:layout_marginBottom="20dp"
+        android:gravity="top"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="이메일아이디"
+        android:inputType="text"/>
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="비밀번호"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/re_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="비밀번호확인"
+        android:inputType="text"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="가입하기"
+        android:onClick="clickLoad"/>
+
+    <ImageView
+
+        android:id="@+id/user_image"
+
+        android:layout_width="235dp"
+
+        android:layout_height="334dp"
+
+        android:layout_gravity="center"
+
+        android:src="@drawable/enrollment" />
+</LinearLayout>
