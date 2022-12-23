@@ -1,57 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp">
 
-    <TextView
-        android:layout_marginTop="20dp"
+    <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="359dp"
+        android:orientation="vertical">
 
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        <ImageView
 
-        android:text="회원 가입"
+            android:id="@+id/user_image"
 
-        android:textSize="20sp"
+            android:layout_width="357dp"
 
-        android:gravity="center_horizontal"
+            android:layout_height="351dp"
 
-        android:textColor="#1A120B"/>
+            android:layout_gravity="center"
 
-    <EditText
-        android:id="@+id/email"
+            android:src="@drawable/we" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:hint="이메일아이디"
-        android:inputType="text"/>
+        android:layout_height="320dp"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:hint="비밀번호"
-        android:inputType="text"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="26dp" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="로그인"
-        android:onClick="clickLoad"/>
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:text="1233231" />
 
-    <ImageView
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-        android:id="@+id/user_image"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
 
-        android:layout_width="309dp"
+            android:gravity="center_horizontal"
 
-        android:layout_height="wrap_content"
+            android:text="로그인"
 
-        android:layout_gravity="center"
+            android:textColor="#1A120B"
 
-        android:src="@drawable/we" />
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/email_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="이메일아이디"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="비밀번호"
+            android:inputType="text"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:onClick="clickLoad"
+                android:text="로그인" />
+
+            <Space
+                android:layout_width="73dp"
+                android:layout_height="46dp" />
+
+            <Button
+                android:id="@+id/sign_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="회원가입" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

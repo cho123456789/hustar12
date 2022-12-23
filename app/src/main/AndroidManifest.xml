@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".Signup"
+            android:name=".result"
+            android:exported="true" />
+        <activity
+            android:name=".manager"
             android:exported="true" />
         <activity
             android:name=".Login"
+            android:exported="true" />
+        <activity
+            android:name=".Signup"
             android:exported="true" />
         <activity
             android:name=".information"

@@ -8,69 +8,99 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-
-        android:text="회원 가입"
-
-        android:textSize="20sp"
-
-        android:gravity="center_horizontal"
-
-        android:textColor="#1A120B"/>
-
-    <EditText
-        android:id="@+id/username"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="사용자 이름"
-        android:inputType="textMultiLine"
-        android:layout_marginBottom="20dp"
-        android:gravity="top"/>
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/email"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+
+            android:gravity="center_horizontal"
+
+            android:text="사용자 회원 가입"
+
+            android:textColor="#1A120B"
+
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:hint="이메일아이디"
-        android:inputType="text"/>
-    <EditText
-        android:id="@+id/password"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="top"
+            android:hint="사용자 이름"
+            android:inputType="textMultiLine"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/email_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="이메일아이디"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="비밀번호"
+            android:inputType="textPassword" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <EditText
+            android:id="@+id/Password_ok"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:ems="10"
+            android:hint="비밀번호 확인"
+            android:inputType="textPassword" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:hint="비밀번호"
-        android:inputType="text"/>
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/re_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:hint="비밀번호확인"
-        android:inputType="text"/>
+        <Button
+            android:id="@+id/enroll_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="가입하기" />
 
+        <ImageView
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="가입하기"
-        android:onClick="clickLoad"/>
+            android:id="@+id/user_image"
 
-    <ImageView
+            android:layout_width="235dp"
 
-        android:id="@+id/user_image"
+            android:layout_height="302dp"
 
-        android:layout_width="235dp"
+            android:layout_gravity="center"
 
-        android:layout_height="334dp"
+            android:src="@drawable/enrollment" />
 
-        android:layout_gravity="center"
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+    </LinearLayout>
 
-        android:src="@drawable/enrollment" />
 </LinearLayout>
