@@ -19,7 +19,6 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         log = (Button) findViewById(R.id.login_btn);
         signup =(Button) findViewById(R.id.sign_btn);
-        txt = (EditText) findViewById(R.id.email_txt);
 
         log.setOnClickListener(new View.OnClickListener() {
             @Override

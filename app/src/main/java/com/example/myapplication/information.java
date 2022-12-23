@@ -12,7 +12,7 @@ public class information extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result);
+        setContentView(R.layout.activity_information);
         btn_result = (Button) findViewById(R.id.button_result);
 
         btn_result.setOnClickListener(new View.OnClickListener() {
