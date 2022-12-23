@@ -50,7 +50,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:hint="이메일아이디"
-            android:inputType="text" />
+            android:inputType="text"
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/Password"
@@ -58,7 +59,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="비밀번호"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
 
         <Space
             android:layout_width="match_parent"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     xmlns:tools="http://schemas.android.com/tools"
@@ -21,6 +21,13 @@
         android:orientation="vertical">
 
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_back_sign"
+            android:layout_width="57dp"
+            android:layout_height="55dp"
+            android:background="#00ff0000"
+            android:text="back"
+            android:textColor="#757575" />
 
         <TextView
             android:layout_marginTop="20dp"
@@ -65,31 +72,41 @@
                 android:maxWidth="200dp"
 
                 android:maxHeight="200dp"
-
-                android:onClick="onClick"
+                tools:srcCompat="@tools:sample/avatars"
                 tools:ignore="SpeakableTextPresentCheck" />
-
-            <Button
-
-                android:id="@+id/btn_UploadPicture"
-
-                android:layout_width="150dp"
-
-                android:layout_height="40dp"
-
-                android:layout_gravity="center"
-
-                android:background="#222"
-
-                android:onClick="onClick"
-
-                android:text="사진 선택"
-
-                android:textSize="15sp"
-                tools:ignore="TouchTargetSizeCheck" />
-
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_Photo"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="사진 촬영" />
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="46dp" />
+
+            <Button
+                android:id="@+id/btn_gallery"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="앨범 사진" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="1" />
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/infomation_layout"
             android:layout_width="match_parent"
@@ -208,4 +225,4 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

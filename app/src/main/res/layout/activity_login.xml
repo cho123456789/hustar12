@@ -34,12 +34,6 @@
             android:layout_height="26dp" />
 
         <TextView
-            android:id="@+id/textView12"
-            android:layout_width="match_parent"
-            android:layout_height="29dp"
-            android:text="1233231" />
-
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
@@ -86,7 +80,6 @@
                 android:id="@+id/login_btn"
                 android:layout_width="118dp"
                 android:layout_height="wrap_content"
-                android:onClick="clickLoad"
                 android:text="로그인" />
 
             <Space
