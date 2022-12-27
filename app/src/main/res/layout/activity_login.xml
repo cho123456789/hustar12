@@ -49,21 +49,21 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/email_txt"
+            android:id="@+id/user_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:hint="이메일아이디"
-            android:inputType="text"
+            android:ems="10"
+            android:hint="아이디"
+            android:inputType="textPersonName"
             android:minHeight="48dp" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/pwd_txt"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_marginBottom="20dp"
             android:hint="비밀번호"
-            android:inputType="text"
+            android:inputType="text|textPassword"
             tools:ignore="TouchTargetSizeCheck" />
 
         <LinearLayout

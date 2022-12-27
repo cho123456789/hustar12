@@ -22,91 +22,28 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_back_sign"
+            android:id="@+id/btn_back"
             android:layout_width="57dp"
             android:layout_height="55dp"
             android:background="#00ff0000"
             android:text="back"
             android:textColor="#757575" />
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
 
-            android:layout_height="wrap_content"
+<!--            android:layout_marginTop="20dp"-->
 
-            android:text="오늘의 복장 기록"
+<!--            android:gravity="center_horizontal"-->
 
-            android:textSize="20sp"
+<!--            android:text="오늘의 복장 기록"-->
 
-            android:gravity="center_horizontal"
+<!--            android:textColor="#1A120B"-->
 
-            android:textColor="#1A120B"/>
+<!--            android:textSize="20sp" />-->
 
-        <LinearLayout
 
-            android:layout_width="match_parent"
-
-            android:layout_height="wrap_content"
-
-            android:orientation="vertical"
-
-            android:layout_gravity="center"
-
-            android:layout_marginTop="20sp"
-
-            >
-
-            <ImageView
-
-                android:id="@+id/user_image"
-
-                android:layout_width="150dp"
-
-                android:layout_height="150dp"
-
-                android:layout_gravity="center"
-
-                android:adjustViewBounds="true"
-
-                android:maxWidth="200dp"
-
-                android:maxHeight="200dp"
-                tools:srcCompat="@tools:sample/avatars"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/btn_Photo"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="사진 촬영" />
-
-            <Space
-                android:layout_width="30dp"
-                android:layout_height="46dp" />
-
-            <Button
-                android:id="@+id/btn_gallery"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="앨범 사진" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
-                android:layout_weight="1" />
-        </LinearLayout>
         <LinearLayout
             android:id="@+id/infomation_layout"
             android:layout_width="match_parent"
@@ -183,13 +120,24 @@
             </LinearLayout>
 
             <EditText
+                android:id="@+id/par_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="보호자 이름"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+            <EditText
                 android:id="@+id/phone1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
-                android:hint="보호자 연락처"
+                android:hint="부) 연락처"
                 android:inputType="text"
                 android:minHeight="48dp" />
 
@@ -200,18 +148,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
-                android:hint="보호자 연락처"
-                android:inputType="text"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/par_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp"
-                android:hint="보호자이름"
+                android:hint="모) 연락처"
                 android:inputType="text"
                 android:minHeight="48dp" />
 
@@ -219,7 +156,7 @@
                 android:id="@+id/button_result"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="결과 화면" />
+                android:text="복장 촬영" />
 
         </LinearLayout>
 

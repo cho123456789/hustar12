@@ -9,13 +9,14 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="501dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="482dp"
+            android:layout_width="401dp"
+            android:layout_height="526dp"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/enrollment" />
 
     </LinearLayout>
@@ -27,7 +28,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="48dp" />
+            android:layout_height="15dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,14 +36,19 @@
             android:orientation="horizontal">
 
             <Space
-                android:layout_width="35dp"
-                android:layout_height="44dp" />
+                android:layout_width="132dp"
+                android:layout_height="49dp" />
 
             <Button
-                android:id="@+id/login_btn"
-                android:layout_width="347dp"
+                android:id="@+id/start_btn"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="START" />
+                android:text="start" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1" />
 
         </LinearLayout>
 
