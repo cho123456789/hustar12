@@ -4,32 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".result">
+    tools:context=".nfc">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/edit1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
-
         <TextView
-            android:id="@+id/result_txt"
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="123" />
+            android:layout_height="108dp"
+            android:text="nfc 스캔 해주세요"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            tools:srcCompat="@drawable/enrollment" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
 
         <Button
-            android:id="@+id/data_btn"
+            android:id="@+id/nfc_result_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="nfc 등록완료" />
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,19 +8,21 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn;
+    Button logbtn , signup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn = (Button)findViewById(R.id.login_btn);
+        signup = (Button)findViewById(R.id.start_btn);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Login.class);
+                Intent intent = new Intent(MainActivity.this,Login.class);  // 로그인으로 넘어가는 화면
                 startActivity(intent);
             }
         });
+
+
     }
 }

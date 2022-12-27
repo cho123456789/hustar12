@@ -3,21 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/dn011/hustar12/app/src/main/res/layout/activity_information.xml" value="0.21240942028985507" />
-        <entry key="..\:/Users/dn011/hustar12/app/src/main/res/layout/activity_login.xml" value="0.21240942028985507" />
-        <entry key="..\:/Users/h/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/activity_information.xml" value="0.328804347826087" />
-        <entry key="..\:/Users/h/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/activity_login.xml" value="0.328804347826087" />
-        <entry key="..\:/Users/h/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/activity_login2.xml" value="0.31354166666666666" />
-        <entry key="..\:/Users/h/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/activity_main.xml" value="0.328804347826087" />
-        <entry key="..\:/Users/h/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/activity_manager.xml" value="0.34193840579710144" />
-        <entry key="..\:/Users/h/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/activity_result.xml" value="0.34193840579710144" />
-        <entry key="..\:/Users/h/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/activity_signup.xml" value="0.328804347826087" />
-        <entry key="..\:/Users/h/AndroidStudioProjects/hustar12/app/src/main/res/layout/activity_information.xml" value="0.5375905797101449" />
-        <entry key="..\:/Users/h/AndroidStudioProjects/hustar12/app/src/main/res/layout/activity_login.xml" value="0.5375905797101449" />
-        <entry key="..\:/Users/h/AndroidStudioProjects/hustar12/app/src/main/res/layout/activity_main.xml" value="0.5375905797101449" />
-        <entry key="..\:/Users/h/AndroidStudioProjects/hustar12/app/src/main/res/layout/activity_manager.xml" value="0.5375905797101449" />
-        <entry key="..\:/Users/h/AndroidStudioProjects/hustar12/app/src/main/res/layout/activity_result.xml" value="0.5375905797101449" />
-        <entry key="..\:/Users/h/AndroidStudioProjects/hustar12/app/src/main/res/layout/activity_signup.xml" value="0.5375905797101449" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/drawable/pro_custom.xml" value="0.1" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/layout-v14/activity_camara_capture.xml" value="0.22192028985507245" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/layout-v14/activity_nfc_information.xml" value="0.2" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/layout/activity_camara_capture.xml" value="0.22192028985507245" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/layout/activity_information.xml" value="0.22192028985507245" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/layout/activity_main.xml" value="0.1125" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/layout/activity_manager.xml" value="0.22192028985507245" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/layout/activity_nfc.xml" value="0.1125" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/layout/activity_nfc_information.xml" value="0.22192028985507245" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/layout/activity_result.xml" value="0.22192028985507245" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/layout/activity_signup.xml" value="0.22192028985507245" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/layout/nfc.xml" value="0.1125" />
+        <entry key="..\:/Users/dn011/hustar12.01.07/app/src/main/res/xml/nfc_tech_list.xml" value="0.1125" />
+        <entry key="..\:/Users/h/Desktop/hustar123/app/src/main/res/layout/activity_information.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/h/Desktop/hustar123/app/src/main/res/layout/activity_login.xml" value="0.5126811594202898" />
+        <entry key="..\:/Users/h/Desktop/hustar123/app/src/main/res/layout/activity_main.xml" value="0.5126811594202898" />
+        <entry key="..\:/Users/h/Desktop/hustar123/app/src/main/res/layout/activity_manager.xml" value="0.3104166666666667" />
+        <entry key="..\:/Users/h/Desktop/hustar123/app/src/main/res/layout/activity_result.xml" value="0.3104166666666667" />
+        <entry key="..\:/Users/h/Desktop/hustar123/app/src/main/res/layout/activity_signup.xml" value="0.3104166666666667" />
+        <entry key="..\:/Users/h/Desktop/hustar123/app/src/main/res/layout/nfc.xml" value="0.3104166666666667" />
+        <entry key="..\:/Users/h/Desktop/hustar123/app/src/main/res/layout/picture.xml" value="0.3104166666666667" />
       </map>
     </option>
   </component>

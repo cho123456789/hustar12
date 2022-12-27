@@ -13,19 +13,22 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_back"
+            android:layout_width="57dp"
+            android:layout_height="55dp"
+            android:background="#00ff0000"
+            android:text="back"
+            android:textColor="#757575" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-
             android:gravity="center_horizontal"
-
             android:text="사용자 회원 가입"
-
             android:textColor="#1A120B"
-
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -35,7 +38,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/user_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -45,16 +48,16 @@
             android:minHeight="48dp" />
 
         <EditText
-            android:id="@+id/email_txt"
+            android:id="@+id/user_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:hint="이메일아이디"
+            android:hint="아이디"
             android:inputType="text"
             android:minHeight="48dp" />
 
         <EditText
-            android:id="@+id/Password"
+            android:id="@+id/user_pwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -65,14 +68,6 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="20dp" />
-
-        <EditText
-            android:id="@+id/Password_ok"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:ems="10"
-            android:hint="비밀번호 확인"
-            android:inputType="textPassword" />
 
     </LinearLayout>
 
