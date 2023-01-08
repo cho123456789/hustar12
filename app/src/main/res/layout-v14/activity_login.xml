@@ -26,7 +26,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="320dp"
+        android:layout_height="284dp"
         android:orientation="vertical">
 
         <Space
@@ -52,9 +52,9 @@
             android:id="@+id/user_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:ems="10"
             android:hint="아이디"
-            android:inputType="text"
+            android:inputType="textPersonName"
             android:minHeight="48dp" />
 
         <EditText
@@ -63,12 +63,12 @@
             android:layout_height="44dp"
             android:layout_marginBottom="20dp"
             android:hint="비밀번호"
-            android:inputType="text"
+            android:inputType="text|textPassword"
             tools:ignore="TouchTargetSizeCheck" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Space
@@ -97,8 +97,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:layout_weight="1" />
+
         </LinearLayout>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/nfc_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="nfc 등록" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
     </LinearLayout>
 
 </LinearLayout>

@@ -18,17 +18,19 @@ import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText et_id, et_pass;
-    private Button btn_login, btn_register;
+    private Button btn_login, btn_register,nfc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
         et_id = findViewById(R.id.user_id);
         et_pass = findViewById(R.id.pwd_txt);
         btn_login = findViewById(R.id.login_btn);
         btn_register = findViewById(R.id.sign_btn);
+        nfc  = findViewById(R.id.nfc_btn);
 
 
         // 회원가입 버튼을 클릭 시 수행
@@ -36,6 +38,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+        nfc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, nfc.class);  // 회원가입 정보 출력
                 startActivity(intent);
             }
         });

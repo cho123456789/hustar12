@@ -57,9 +57,8 @@
             android:id="@+id/kid_bir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="생년월일"
-            android:inputType="textPassword"
+            android:hint="(YYYYMMDD)생년월일"
+            android:inputType="text"
             android:minHeight="48dp" />
 
         <Space
@@ -69,9 +68,8 @@
             android:id="@+id/kid_guard_nm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:hint="보호자 이름"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:minHeight="48dp" />
 
         <Space
@@ -81,9 +79,8 @@
             android:id="@+id/kid_guard_tel1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:hint="보호자 전화번호1"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:minHeight="48dp" />
 
         <Space
@@ -93,9 +90,8 @@
             android:id="@+id/kid_guard_tel2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:hint="보호자 전화번호2"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:minHeight="48dp" />
 
         <Space
