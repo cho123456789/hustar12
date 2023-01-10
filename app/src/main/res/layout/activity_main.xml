@@ -4,8 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D7E9B9"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="61dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Golden Time"
+        android:textAlignment="center"
+        android:textColor="#504D35"
+        android:textSize="60sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -13,43 +28,36 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="482dp"
-            app:srcCompat="@drawable/enrollment" />
-
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/main_image" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="90dp"
+        android:orientation="horizontal">
 
         <Space
-            android:layout_width="match_parent"
-            android:layout_height="48dp" />
+            android:layout_width="84dp"
+            android:layout_height="49dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+        <android.widget.Button
+            android:id="@+id/start_btn"
+            android:layout_width="241dp"
+            android:layout_height="75dp"
+            android:background="@drawable/btn_custom"
+            android:text="Start"
+            android:textAlignment="center"
+            android:textColor="#F8F5F5"
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
-            <Space
-                android:layout_width="132dp"
-                android:layout_height="49dp" />
-
-            <Button
-                android:id="@+id/start_btn"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="start" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_weight="1" />
-
-        </LinearLayout>
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
 
     </LinearLayout>
 

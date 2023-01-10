@@ -1,70 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D7E9B9"
     android:orientation="vertical"
     android:padding="20dp">
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="359dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <ImageView
-
-            android:id="@+id/user_image"
-
-            android:layout_width="357dp"
-
-            android:layout_height="351dp"
-
-            android:layout_gravity="center"
-
-            android:src="@drawable/we" />
+        <TextView
+            android:id="@+id/txt_scan"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/et_custom"
+            android:paddingTop="10sp"
+            android:paddingEnd="10sp"
+            android:textAlignment="center"
+            android:textColor="#100F0F"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="284dp"
+        android:layout_height="428dp"
         android:orientation="vertical">
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="26dp" />
+            android:layout_height="11dp" />
 
-        <TextView
+        <ImageView
+            android:id="@+id/imageView3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="370dp"
+            app:srcCompat="@drawable/mia" />
 
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-
-            android:gravity="center_horizontal"
-
-            android:text="로그인"
-
-            android:textColor="#1A120B"
-
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/user_id"
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="아이디"
-            android:inputType="textPersonName"
-            android:minHeight="48dp" />
-
-        <EditText
-            android:id="@+id/pwd_txt"
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:layout_marginBottom="20dp"
-            android:hint="비밀번호"
-            android:inputType="text|textPassword"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:layout_height="10dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,26 +55,107 @@
             android:orientation="horizontal">
 
             <Space
+                android:layout_width="113dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="221dp"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="23dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/user_id"
+                android:layout_width="311dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_custom"
+                android:ems="10"
+                android:hint="아이디"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingLeft="10dp" />
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="39dp" />
+
+            <EditText
+                android:id="@+id/pwd_txt"
+                android:layout_width="311dp"
+                android:layout_height="44dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/et_custom"
+                android:hint="비밀번호"
+                android:inputType="text|textPassword"
+                android:paddingLeft="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="43dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:orientation="horizontal">
+
+            <Space
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/login_btn"
                 android:layout_width="118dp"
                 android:layout_height="wrap_content"
-                android:text="로그인" />
+                android:background="@drawable/btn_custom"
+                android:text="로그인"
+                android:textColor="#FBF8F8" />
 
             <Space
                 android:layout_width="73dp"
-                android:layout_height="46dp" />
+                android:layout_height="match_parent" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/sign_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="회원가입" />
+                android:background="@drawable/btn_custom"
+                android:text="회원가입"
+                android:textColor="#FBF8F8" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -100,29 +164,6 @@
 
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/nfc_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:text="nfc 등록" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
     </LinearLayout>
 
 </LinearLayout>

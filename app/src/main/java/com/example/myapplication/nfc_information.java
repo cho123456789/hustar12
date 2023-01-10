@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,6 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -32,7 +36,7 @@ public class nfc_information extends AppCompatActivity {
         setContentView(R.layout.activity_nfc_information);
         Intent intent = getIntent();
         String text = intent.getStringExtra("text");
-        TextView text_tv = findViewById(R.id.txt1);
+        //TextView text_tv = findViewById(R.id.txt1);
         txt_name = findViewById(R.id.txt_name);
         txt_year = findViewById(R.id.txt_year);
         txt_age = findViewById(R.id.txt_age);
@@ -40,17 +44,11 @@ public class nfc_information extends AppCompatActivity {
         txt_p_number1 = findViewById(R.id.txt_p_number);
         txt_p_number2 = findViewById(R.id.txt_p_number2);
         img1 = findViewById(R.id.dect1);
-        text_tv.setText(text);
+        //text_tv.setText(text);
         ProgressDialog progressDialog , progressDialog1;
 
         if (text.equals("7d1fe0ed"))
         {
-            txt_name.setText("아이이름 : 카리나");
-            txt_year.setText("생년월일 : 2000-04-11");
-            txt_age.setText("성별 : 여");
-            txt_p_name.setText("보호자 이름: 에스파");
-            txt_p_number1.setText("부) 연락처  :010-1252-4475");
-            txt_p_number2.setText("모 ) 연락처 :010-2131-4142");
             storageReference = FirebaseStorage.getInstance().getReference("my_folder/" + "AA134HmM" + ".png");
             // 다운로드할 파일명 설정
             try {
@@ -70,6 +68,19 @@ public class nfc_information extends AppCompatActivity {
                                 // 대화상자 종료
 
                                 Bitmap bitmap = BitmapFactory.decodeFile(localfile.getAbsolutePath());
+                                txt_name.setText("아이이름 : 카리나");
+                                txt_year.setText("생년월일 : 2000-04-11");
+                                txt_age.setText("성별 : 여");
+                                txt_p_name.setText("보호자 이름: 에스파");
+                                txt_p_number1.setText("부) 연락처  : 010-1252-4475");
+                                txt_p_number1.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Intent tt = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:01077777777"));
+                                        startActivity(tt);
+                                    }
+                                });
+                                txt_p_number2.setText("모 ) 연락처 : 010-2131-4142");
                                 //  가주온 파일을 비트맵으로 디코딩실시
                                 int mDegree = 0;
                                 mDegree = mDegree + 360;
@@ -77,6 +88,9 @@ public class nfc_information extends AppCompatActivity {
                                 img1.setImageBitmap(rotateImage(bitmap, mDegree));
                                 //binding.dect1.setImageBitmap(bitmap);
                                 // 이미지뷰에 이미지 표시하기
+                                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                DatabaseReference databaseReference = database.getReference("/test/nfc");
+                                databaseReference.setValue("0");
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -124,6 +138,9 @@ public class nfc_information extends AppCompatActivity {
                                 img1.setImageBitmap(rotateImage(bitmap, mDegree));
                                 //binding.dect1.setImageBitmap(bitmap);
                                 // 이미지뷰에 이미지 표시하기
+                                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                DatabaseReference databaseReference = database.getReference("/test/nfc");
+                                databaseReference.setValue("0");
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                     @Override

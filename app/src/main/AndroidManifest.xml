@@ -7,6 +7,7 @@
     <uses-feature
         android:name="android.hardware.nfc"
         android:required="true" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
@@ -30,6 +31,7 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
+
         <activity
             android:name=".nfc_information"
             android:exported="true" />
@@ -40,9 +42,6 @@
             android:name=".RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".ResultActivity"
-            android:exported="true" />
-        <activity
             android:name=".KidActivity"
             android:exported="true" />
         <activity
@@ -50,6 +49,12 @@
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BookList01Activity"
+            android:exported="true" />
+        <activity
+            android:name=".UserResultActivitiy"
             android:exported="true" />
 
         <provider

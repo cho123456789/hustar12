@@ -22,15 +22,19 @@ import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.bumptech.glide.Glide;
 
 import java.math.BigInteger;
 
 public class nfc extends AppCompatActivity {
     private String tag = "123";
     Button nfc_result_btn;
+
     // list of NFC technologies detected:
     private final String[][] techList = new String[][] {
             new String[] {
@@ -47,6 +51,10 @@ public class nfc extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nfc);
+        ImageView lala_gif_img = (ImageView)findViewById(R.id.nfc);
+        Glide.with(this).load(R.raw.nfc).into(lala_gif_img);
+        Intent intent = getIntent();
+        String nm = intent.getStringExtra("kid_nm");
     }
     @Override
     protected void onResume() {
@@ -115,23 +123,26 @@ public class nfc extends AppCompatActivity {
         }
     }
     private String dumpTagData(Parcelable p) {
+        nfc_result_btn = findViewById(R.id.nfc_result_btn);
         StringBuilder sb = new StringBuilder();
         Tag tag = (Tag) p;
         byte[] id = tag.getId();
         //TextView txt2 = findViewById(R.id.txt2);
         String user_id = getHex(id);
+        Toast.makeText(getApplicationContext(), "등록이 완료되었습니다.", Toast.LENGTH_SHORT).show();
+        nfc_result_btn.setVisibility(View.VISIBLE);
+
         nfc_result_btn = findViewById(R.id.nfc_result_btn);
         nfc_result_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(nfc.this,nfc_information.class);
+                Intent intent = new Intent(nfc.this,Picture.class);
                 intent.putExtra("text", user_id);
                 startActivity(intent);
             }
         });
         //입력한 input값을 intent로 전달한다.
         //startActivity(intent);
-        Toast.makeText(getApplicationContext(), user_id, Toast.LENGTH_SHORT).show();
         //txt2.setText(n);
         sb.append("Tag ID (hex): ").append(getHex(id)).append("\n");
         //sb.append("Tag ID (dec): ").append(getDec(id)).append("\n");
@@ -254,7 +265,4 @@ public class nfc extends AppCompatActivity {
         Log.d("ByteArrayToHexString", String.format("%0" + (inarray.length * 2) + "X", new BigInteger(1,inarray)));
         return out;
     }
-
-
-
 }

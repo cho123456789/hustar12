@@ -4,29 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D7E9B9"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="117dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="49dp"
 
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
 
             android:gravity="center_horizontal"
 
+            android:paddingTop="10sp"
+
             android:text="아이 정보 입력"
 
-            android:textColor="#1A120B"
-
-            android:textSize="20sp" />
+            android:textAlignment="center"
+            android:textColor="#040303"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -39,82 +43,134 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:gravity="top"
+            android:background="@drawable/et_custom"
             android:hint="아이 이름"
             android:inputType="textMultiLine"
-            android:minHeight="48dp" />
+            android:privateImeOptions="defaultInputmode=korean"
+            android:maxLength="4"
+            android:minHeight="48dp"
+            android:paddingLeft="10dp" />
 
-        <EditText
-            android:id="@+id/kid_gend"
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/kid_gend"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginBottom="20dp"-->
+        <!--            android:hint="아이 성별"-->
+        <!--            android:inputType="text"-->
+        <!--            android:minHeight="48dp" />-->
+
+        <RadioGroup
+            android:id="@+id/kid_gender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:hint="아이 성별"
-            android:inputType="text"
-            android:minHeight="48dp" />
+            android:background="@drawable/et_custom"
+            android:minHeight="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="80dp"
+                android:paddingLeft="10dp"
+                android:text="아이 성별"
+                android:textColor="#a3a2a0"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="남자" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="69dp"
+                android:layout_height="wrap_content"
+                android:text="여자" />
+
+        </RadioGroup>
 
         <EditText
             android:id="@+id/kid_bir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="(YYYYMMDD)생년월일"
-            android:inputType="text"
-            android:minHeight="48dp" />
+            android:background="@drawable/et_custom"
+            android:hint="생년월일(YYYYMMDD)"
+            android:inputType="phone"
+            android:maxLength="8"
+            android:minHeight="48dp"
+            android:paddingLeft="10dp" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="20dp" />
+
         <EditText
             android:id="@+id/kid_guard_nm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/et_custom"
+            android:privateImeOptions="defaultInputmode=korean"
             android:hint="보호자 이름"
+            android:maxLength="13"
             android:inputType="text"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:paddingLeft="10dp" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="20dp" />
+
         <EditText
             android:id="@+id/kid_guard_tel1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/et_custom"
             android:hint="보호자 전화번호1"
-            android:inputType="text"
-            android:minHeight="48dp" />
+            android:inputType="phone"
+            android:maxLength="13"
+            android:minHeight="48dp"
+            android:paddingLeft="10dp" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="20dp" />
+
         <EditText
             android:id="@+id/kid_guard_tel2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/et_custom"
             android:hint="보호자 전화번호2"
-            android:inputType="text"
-            android:minHeight="48dp" />
+            android:inputType="phone"
+            android:maxLength="13"
+            android:minHeight="48dp"
+            android:paddingLeft="10dp" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:layout_height="59dp" />
 
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="63dp"
         android:orientation="vertical">
 
-        <Button
+        <android.widget.Button
             android:id="@+id/regi_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="저장하기" />
+            android:background="@drawable/btn_custom"
+            android:text="저장하기"
+            android:textColor="#FBF8F8" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="25dp" />
     </LinearLayout>
 
 </LinearLayout>

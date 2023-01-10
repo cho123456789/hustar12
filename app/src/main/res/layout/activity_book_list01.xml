@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#D7E9B9"
+    tools:context=".BookList01Activity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="등록한 아이 리스트"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="731dp"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="34dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView1"
+            android:layout_width="match_parent"
+            android:layout_height="698dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="694dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="711dp"
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_marginTop="40sp"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="34dp"
+                android:layout_height="83dp"
+                android:layout_weight="1" />
+
+            <android.widget.Button
+                android:id="@+id/start_nfc_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginBottom="23dp"
+                android:background="@drawable/btn_custom"
+                android:text="Start"
+                android:textColor="#F8F3F3"
+                android:textSize="15sp" />
+
+            <android.widget.Button
+                android:id="@+id/stop_nfc_stop"
+                android:layout_width="114dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_custom"
+                android:text="stop"
+                android:textColor="#F8F5F5"
+                android:textSize="15sp" />
+
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <android.widget.Button
+                android:id="@+id/addcategoryBtn"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="23dp"
+                android:background="@drawable/plus" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

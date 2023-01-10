@@ -26,6 +26,7 @@ import androidx.core.content.FileProvider;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -41,7 +42,7 @@ import java.util.Date;
 public class Picture extends AppCompatActivity {
     Button back_btn, btnupload, btnnext;
     ImageView img1;
-    TextView barcodename;
+    TextView barcodename ,txt_p;
     ProgressBar dialog;
     // -------버튼 타입 설정-----------//
 
@@ -65,13 +66,16 @@ public class Picture extends AppCompatActivity {
         btnnext = findViewById(R.id.nextbtn);
         dialog = findViewById(R.id.progressBar2);
         barcodename = findViewById(R.id.barcodename);
+       //txt_p= findViewById(R.id.txt_p);
         barcodename.setText("아동의 착장 촬영을 위해서 " + "\n" + "아이콘을 클릭해주세요");
+        Intent intent = getIntent();
+        String nm = intent.getStringExtra("kid_nm");
+        //txt_p.setText(n);
         //-----------버튼 이벤트 설정-------------------//
-
         btnupload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                uploadToFirebase1();   // 업로드 함수로 이동
+                uploadToFirebase1(nm);   // 업로드 함수로 이동
                 //upload_txt.setVisibility(View.VISIBLE);
 
             }
@@ -95,7 +99,7 @@ public class Picture extends AppCompatActivity {
         btnnext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(Picture.this,ResultActivity.class);
+                Intent myIntent = new Intent(Picture.this,BookList01Activity.class);
                 startActivity(myIntent); // 이벤트 시작하는 코드
                 finish(); // 이벤트 종료
             }
@@ -109,7 +113,7 @@ public class Picture extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bitmap bitmap = BitmapFactory.decodeFile(imageFilePath);
-            Bitmap resize = Bitmap.createScaledBitmap(bitmap, 720, 1280, true);
+            Bitmap resize = Bitmap.createScaledBitmap(bitmap, 1280, 1280, true);
             ExifInterface exif = null;
 
             try {
@@ -191,19 +195,19 @@ public class Picture extends AppCompatActivity {
 
 
     // ---- 파이어베이스 사진 업로드  -------------------------------//
-    private  void uploadToFirebase1() {
+    private  void uploadToFirebase1(String nm) {
         FirebaseStorage storage = FirebaseStorage.getInstance();
         // 파이어베이스 참조 설정
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd_HH_mm_ss");
+        //SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd_HH_mm_ss");
         // 현재 년월일 시간 지정
-        Date now = new Date();
+        //Date now = new Date();
         // 현재 날짜 클래스 설정
-        String filename = formatter.format(now) + ".png";
+        //String filename = formatter.format(now) + ".png";
         // 현재 날짜를 변환하여 문자열로 전환
 
         //String filename2 = "4" + ".png";
 
-        StorageReference storageRef = storage.getReferenceFromUrl("gs://goldentest-27f43.appspot.com").child("my_folder/" + filename);
+        StorageReference storageRef = storage.getReferenceFromUrl("gs://hustar12.appspot.com").child("my_folder/" + nm + ".png");
         // 현재 파이어베이스에서 접속하고자하는 url 및 폴더 및 저장할 이름설정
         storageRef.putFile(photoUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             // 이미지를 파이어베이스에 저장
