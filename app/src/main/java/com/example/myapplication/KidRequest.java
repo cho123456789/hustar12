@@ -10,7 +10,7 @@ import java.util.Map;
 public class KidRequest extends StringRequest {
 
     // 서버 URL 설정 ( PHP 파일 연동 )
-    final static private String URL = "http://10.1.4.110/select7.php";
+    final static private String URL = "http://10.1.4.110/iselect7.php";
     private Map<String, String> map;
 
 
@@ -30,6 +30,7 @@ public class KidRequest extends StringRequest {
 
     @Override
     protected Map<String, String> getParams() throws AuthFailureError {
+        Map<String,String> parameters  = new HashMap<String, String>();
         return map;
     }
 }

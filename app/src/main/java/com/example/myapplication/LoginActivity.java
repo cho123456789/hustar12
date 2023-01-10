@@ -1,8 +1,11 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -17,20 +20,47 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
+
+    private String TAG = KidActivity.class.getSimpleName();
     private EditText et_id, et_pass;
     private Button btn_login, btn_register,nfc;
+    private WebView webView = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        webView = (WebView) findViewById(R.id.webview);
 
         et_id = findViewById(R.id.user_id);
         et_pass = findViewById(R.id.pwd_txt);
         btn_login = findViewById(R.id.login_btn);
         btn_register = findViewById(R.id.sign_btn);
         nfc  = findViewById(R.id.nfc_btn);
+
+        WebSettings wsetting = webView.getSettings();
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+        {// https 이미지.
+            wsetting.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+        }
+
+        // webView.setWebViewClient(new WebViewClient());  // 새 창 띄우기 않기
+        // webView.setWebChromeClient(new WebChromeClient());
+
+      //  webView.getSettings().setLoadWithOverviewMode(true);  // WebView 화면크기에 맞추도록 설정 - setUseWideViewPort 와 같이 써야함
+       // webView.getSettings().setUseWideViewPort(true);  // wide viewport 설정 - setLoadWithOverviewMode 와 같이 써야함
+
+        // webView.getSettings().setSupportZoom(false);  // 줌 설정 여부
+        // webView.getSettings().setBuiltInZoomControls(false);  // 줌 확대/축소 버튼 여부
+
+       webView.getSettings().setJavaScriptEnabled(true); // 자바스크립트 사용여부
+//        webview.addJavascriptInterface(new AndroidBridge(), "android");
+        webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true); // javascript가 window.open()을 사용할 수 있도록 설정
+
+        // webView.getSettings().setDomStorageEnabled(true);  // 로컬 스토리지
+        webView.loadUrl("https://www.safe182.go.kr/api/lcm/amberListTForm.do?esntlId=10000510&authKey=e5ab0c5fc44f4439&viewType=01");
+
 
 
         // 회원가입 버튼을 클릭 시 수행

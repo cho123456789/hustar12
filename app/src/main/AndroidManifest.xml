@@ -30,6 +30,11 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
+
+        <activity
+            android:name=".test"
+            android:exported="true" />
+
         <activity
             android:name=".nfc_information"
             android:exported="true" />

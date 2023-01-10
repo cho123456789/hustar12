@@ -44,21 +44,53 @@
             android:inputType="textMultiLine"
             android:minHeight="48dp" />
 
-        <EditText
-            android:id="@+id/kid_gend"
+<!--        <EditText-->
+<!--            android:id="@+id/kid_gend"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:hint="아이 성별"-->
+<!--            android:inputType="text"-->
+<!--            android:minHeight="48dp" />-->
+
+        <RadioGroup
+            android:id="@+id/kid_gender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:hint="아이 성별"
-            android:inputType="text"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아이 성별"
+                android:textSize="20sp"
+                android:layout_marginEnd="80dp"/>
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="남자"
+                android:layout_marginEnd="20dp"
+                />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여자"
+                />
+
+        </RadioGroup>
 
         <EditText
             android:id="@+id/kid_bir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="(YYYYMMDD)생년월일"
-            android:inputType="text"
+            android:hint="생년월일 (YYYYMMDD)"
+            android:inputType="textVisiblePassword"
             android:minHeight="48dp" />
 
         <Space
@@ -80,7 +112,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="보호자 전화번호1"
-            android:inputType="text"
+            android:inputType="textVisiblePassword"
             android:minHeight="48dp" />
 
         <Space
@@ -91,7 +123,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="보호자 전화번호2"
-            android:inputType="text"
+            android:inputType="textVisiblePassword"
             android:minHeight="48dp" />
 
         <Space
@@ -112,9 +144,6 @@
             android:layout_height="wrap_content"
             android:text="저장하기" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="25dp" />
     </LinearLayout>
 
 </LinearLayout>
