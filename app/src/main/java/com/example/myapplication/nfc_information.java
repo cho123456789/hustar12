@@ -47,7 +47,7 @@ public class nfc_information extends AppCompatActivity {
         //text_tv.setText(text);
         ProgressDialog progressDialog , progressDialog1;
 
-        if (text.equals("7d1fe0ed"))
+        if (text.equals("21879a70"))
         {
             storageReference = FirebaseStorage.getInstance().getReference("my_folder/" + "AA134HmM" + ".png");
             // 다운로드할 파일명 설정
@@ -106,13 +106,13 @@ public class nfc_information extends AppCompatActivity {
 
         if (text.equals("265a4411"))
         {
-            txt_name.setText("아이이름 : 윈터");
-            txt_year.setText("생년월일 : 2001-01-01");
+            txt_name.setText("아이이름 : 이지은");
+            txt_year.setText("생년월일 : 1997-12-08");
             txt_age.setText("성별 : 여");
-            txt_p_name.setText("보호자 이름: 에스파");
-            txt_p_number1.setText("부) 연락처  :010-3422-4400");
-            txt_p_number2.setText("모 ) 연락처 :010-2211-4100");
-            storageReference = FirebaseStorage.getInstance().getReference("my_folder/" + "winter" + ".png");
+            txt_p_name.setText("보호자 이름: 김수겸");
+            txt_p_number1.setText("부) 연락처  :010-5432-9186");
+            txt_p_number2.setText("모 ) 연락처 :010-6725-9186");
+            storageReference = FirebaseStorage.getInstance().getReference("my_folder/" + "null" + ".png");
             // 다운로드할 파일명 설정
             try {
                 progressDialog1 = new ProgressDialog(nfc_information.this);
@@ -133,7 +133,7 @@ public class nfc_information extends AppCompatActivity {
                                 Bitmap bitmap = BitmapFactory.decodeFile(localfile.getAbsolutePath());
                                 //  가주온 파일을 비트맵으로 디코딩실시
                                 int mDegree = 0;
-                                mDegree = mDegree + 360;
+                                mDegree = mDegree + 90;
                                 img1 = findViewById(R.id.dect1);
                                 img1.setImageBitmap(rotateImage(bitmap, mDegree));
                                 //binding.dect1.setImageBitmap(bitmap);

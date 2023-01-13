@@ -31,12 +31,11 @@
                     android:layout_height="23dp" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/txt_nfc_name"
                     android:layout_width="368dp"
                     android:layout_height="87dp"
                     android:background="@drawable/et_custom"
                     android:paddingTop="10sp"
-                    android:text="미아 등록을 위해 팔찌를 등록해주세요"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="24sp"

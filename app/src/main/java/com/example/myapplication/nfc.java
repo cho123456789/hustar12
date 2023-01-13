@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import static android.content.ContentValues.TAG;
 
+import android.annotation.SuppressLint;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -23,6 +24,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +36,7 @@ import java.math.BigInteger;
 public class nfc extends AppCompatActivity {
     private String tag = "123";
     Button nfc_result_btn;
+    TextView txt_nfc_name;
 
     // list of NFC technologies detected:
     private final String[][] techList = new String[][] {
@@ -47,6 +50,7 @@ public class nfc extends AppCompatActivity {
                     MifareUltralight.class.getName(), Ndef.class.getName()
             }
     };
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +59,9 @@ public class nfc extends AppCompatActivity {
         Glide.with(this).load(R.raw.nfc).into(lala_gif_img);
         Intent intent = getIntent();
         String nm = intent.getStringExtra("kid_nm");
+        txt_nfc_name = findViewById(R.id.txt_nfc_name);
+        txt_nfc_name.setText("아동 등록을 위해"+"\n"+"기기를 휴대폰에 접촉해주세요");
+
     }
     @Override
     protected void onResume() {
